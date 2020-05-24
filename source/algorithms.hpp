@@ -3,13 +3,15 @@
 
 #include <array>
 #include <iterator>
+#include <algorithm>
+#include <iostream>
 
 /**
  * Kleinste Zahl die durch 1-20 teilbar ist
  *
  * @return kleinste durch 1-20 teilbare Zahl
 */
-void quicksort (std::array<int, 3> A, int p, int r);
+std::array<int, 3> quicksort (std::array<int, 3> A, int p, int r);
 
 int partition (std::array<int, 3> A, int p, int r);
 

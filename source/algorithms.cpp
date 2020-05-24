@@ -1,5 +1,6 @@
 #include "algorithms.hpp"
 
+/*
 void quicksort (std::array<int, 3> A, int p, int r) {
     if (p < r) {
         int q = partition (A, p, r);
@@ -25,4 +26,24 @@ int partition (std::array<int, 3> A, int p, int r) {
     A[i + 1] = temp4;
     A[r] = temp3;
     return i + 1;
+}
+*/
+
+std::array<int, 3> quicksort (std::array<int, 3> A, int start, int end) {
+    if (start < end) {
+        int pivot = (start + end) / 2;
+        int endOfLeftSide = start;
+        std::swap(A[pivot], A[end]);
+        pivot = end;
+        for (int i = start; i <= end; i++) {
+            if (A[i] < A[pivot]) {
+                std::swap(A[endOfLeftSide], A[i]);
+                endOfLeftSide++;
+            }
+        }
+        std::swap(A[endOfLeftSide], A[pivot]);
+        quicksort(A, start, endOfLeftSide - 1);
+        quicksort(A, endOfLeftSide + 1, end);
+    }
+    return A;
 }
