@@ -17,3 +17,7 @@ void quicksort (std::vector<int>& array, int start, int end) {
         quicksort(array, endOfLeftSide + 1, end);
     }
 }
+
+int counting_sort (std::vector<int> A, int k){
+    
+}
