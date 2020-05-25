@@ -7,13 +7,13 @@
 #include <iostream>
 
 /**
- * Kleinste Zahl die durch 1-20 teilbar ist
+ * Sorting an given array by using the quicksort algorithm
  *
- * @return kleinste durch 1-20 teilbare Zahl
+ * @param array array to be sorted
+ * @param start index of first array value (usually 0)
+ * @param end index of last array element (array size - 1)
 */
-void quicksort (std::vector<int>& A, int p, int r);
-
-int partition (std::vector<int> A, int p, int r);
+void quicksort (std::vector<int>& array, int start, int end);
 
 /**
  * Groessten gemeinsamen Teiler von zwei Zahlen (mit Hilfe des Euklidischen Algorithmus)
