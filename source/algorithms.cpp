@@ -17,3 +17,19 @@ void quicksort (std::vector<int>& array, int start, int end) {
         quicksort(array, endOfLeftSide + 1, end);
     }
 }
+
+std::vector<int> counting_sort (std::vector<int> array_a, int k) {
+    std::vector<int> array_b;
+    std::vector<int> array_c;
+    for (int j = 0; j < array_a.size(); j++) {
+        array_c[array_a[j]]++;
+    }
+    for (int i = 1; i < k; i++) {
+        array_c[i] += array_c[i - 1];
+    }
+    for (int j = array_a.size() - 1; j <= 0; j--) {
+        array_b[array_c[array_a[j]]] = array_a[j];
+        array_c[array_a[j]]--;
+    }
+    return array_b;
+}

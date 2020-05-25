@@ -4,6 +4,8 @@
 
 int main () {
 
+    //___________________Quicksort___________________
+    std::cout << "=====================QUICKSORT========================\n";
     //Output for array(vector) of size 3
     std::vector<int> a3 = {0, 15, 1};
     std::cout << "Array of size 3 before: \n";
@@ -49,5 +51,20 @@ int main () {
         std::cout << a7[i] << ' ';
     }
     std::cout << "\n ---------------------------------------- \n";
-
+    //___________________Counting sort___________________
+    std::cout << "=====================COUNTING SORT========================\n";
+    //Output for array(vector) of size 3
+    std::vector<int> cs_a3 = {0, 15, 1};
+    std::cout << "Array of size 3 before: \n";
+    for (int i = 0; i < cs_a3.size(); i++) {
+        std::cout << cs_a3[i] << ' ';
+    }
+    std::cout << "\n";
+    cs_a3 = counting_sort(cs_a3, *max_element(cs_a3.begin(), cs_a3.end()));
+    
+    std::cout << "Array of size 3 after: \n";
+    for (int i = 0; i < cs_a3.size(); i++) {
+        std::cout << cs_a3[i] << ' ';
+    }
+    std::cout << "\n ---------------------------------------- \n";
 }
