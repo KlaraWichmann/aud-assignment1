@@ -1,7 +1,7 @@
 #ifndef ALGORITHMS_HPP
 #define ALGORITHMS_HPP
 
-#include <array>
+#include <vector>
 #include <iterator>
 #include <algorithm>
 #include <iostream>
@@ -11,9 +11,9 @@
  *
  * @return kleinste durch 1-20 teilbare Zahl
 */
-std::array<int, 3> quicksort (std::array<int, 3> A, int p, int r);
+std::vector<int> quicksort (std::vector<int> A, int p, int r);
 
-int partition (std::array<int, 3> A, int p, int r);
+int partition (std::vector<int> A, int p, int r);
 
 /**
  * Groessten gemeinsamen Teiler von zwei Zahlen (mit Hilfe des Euklidischen Algorithmus)
@@ -23,6 +23,6 @@ int partition (std::array<int, 3> A, int p, int r);
  * @return groesster gemeinsamer Teiler von a und b
  *
 */
-int counting_sort (std::array<int, 10> A, int k);
+int counting_sort (std::vector<int> A, int k);
 
 #endif

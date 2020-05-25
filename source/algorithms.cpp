@@ -29,7 +29,7 @@ int partition (std::array<int, 3> A, int p, int r) {
 }
 */
 
-std::array<int, 3> quicksort (std::array<int, 3> A, int start, int end) {
+std::vector<int> quicksort (std::vector<int> A, int start, int end) {
     if (start < end) {
         int pivot = (start + end) / 2;
         int endOfLeftSide = start;
