@@ -11,7 +11,7 @@
  *
  * @return kleinste durch 1-20 teilbare Zahl
 */
-std::vector<int> quicksort (std::vector<int> A, int p, int r);
+void quicksort (std::vector<int>& A, int p, int r);
 
 int partition (std::vector<int> A, int p, int r);
 
