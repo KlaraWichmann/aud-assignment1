@@ -4,16 +4,50 @@
 
 int main () {
 
-    std::vector<int> a2 = {0, 22, 13};
-    for (const auto& i: a2) {
-        std::cout << i << ' ';
+    //Output for array(vector) of size 3
+    std::vector<int> a3 = {0, 15, 1};
+    std::cout << "Array of size 3 before: \n";
+    for (int i = 0; i < a3.size(); i++) {
+        std::cout << a3[i] << ' ';
     }
     std::cout << "\n";
         
-    quicksort (a2, 0, a2.size() - 1);
+    quicksort (a3, 0, a3.size() - 1);
     
-    for (const auto& i: a2) {
-        std::cout << i << ' ';
+    std::cout << "Array of size 3 after: \n";
+    for (int i = 0; i < a3.size(); i++) {
+        std::cout << a3[i] << ' ';
     }
+    std::cout << "\n ---------------------------------------- \n";
+    //Output for array(vector) of size 4
+    std::vector<int> a4 = {-5, -10, 5, 3};
+    std::cout << "Array of size 4 before: \n";
+    for (int i = 0; i < a4.size(); i++) {
+        std::cout << a4[i] << ' ';
+    }
+    std::cout << "\n";
+        
+    quicksort (a4, 0, a4.size() - 1);
+    
+    std::cout << "Array of size 4 after: \n";
+    for (int i = 0; i < a4.size(); i++) {
+        std::cout << a4[i] << ' ';
+    }
+    std::cout << "\n ---------------------------------------- \n";
+    //Output for array(vector) of size 7
+    std::vector<int> a7 = {0, -1, 15, 3, 24, 22, 13};
+    std::cout << "Array of size 7 before: \n";
+    for (int i = 0; i < a7.size(); i++) {
+        std::cout << a7[i] << ' ';
+    }
+    std::cout << "\n";
+        
+    quicksort (a7, 0, a7.size() - 1);
+    
+    std::cout << "Array of size 7 after: \n";
+    for (int i = 0; i < a7.size(); i++) {
+        std::cout << a7[i] << ' ';
+    }
+    std::cout << "\n ---------------------------------------- \n";
 
 }
