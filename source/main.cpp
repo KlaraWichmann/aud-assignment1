@@ -119,4 +119,28 @@ int main () {
         std::cout << a10_sorted[i] << ' ';
     }
     std::cout << "\n ---------------------------------------- \n";
+
+    std::cout << "Array before sorting: \n";
+    std::vector<int> a12 = {14, 12, 19, 96, 5, 5, 1, 3, 13};
+    for (int i = 0; i < a12.size(); i++) {
+        std::cout << a12[i] << ' ';
+    }
+    std::cout << "\nSorted: \n";
+    std::vector<int> a12_sorted = counting_sort(a12,96);
+    for (int i = 0; i < a12_sorted.size(); i++) {
+        std::cout << a12_sorted[i] << ' ';
+    }
+    std::cout << "\n ---------------------------------------- \n";
+
+        std::cout << "Array before sorting: \n";
+    std::vector<int> a13 = {9, 8, 7, 7, 6, 5, 4, 3, 3, 2, 1, 0};
+    for (int i = 0; i < a13.size(); i++) {
+        std::cout << a13[i] << ' ';
+    }
+    std::cout << "\nSorted: \n";
+    std::vector<int> a13_sorted = counting_sort(a13,9);
+    for (int i = 0; i < a13_sorted.size(); i++) {
+        std::cout << a13_sorted[i] << ' ';
+    }
+    std::cout << "\n ---------------------------------------- \n";
 }

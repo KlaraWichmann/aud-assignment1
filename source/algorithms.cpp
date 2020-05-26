@@ -18,18 +18,18 @@ void quicksort (std::vector<int>& array, int start, int end) {
     }
 }
 
-std::vector<int> counting_sort (std::vector<int>const& array, int k){
-    std::vector<int> counts(k+1, 0);  // Laenge k+1, alle mit 0 initialisieren
-    for(int i = 0; i < array.size(); i++){ // zaehlen wie oft Werte von 0 bis k vorkommen, an jeweiliger Position Anzahl eintragen
+std::vector<int> counting_sort (std::vector<int>const& array, int k){ //values in array must be between 0 and k
+    std::vector<int> counts(k+1, 0);  // array with length k+1, initialized with zeros only
+    for(int i = 0; i < array.size(); ++i){ // count how often each value in given array (between 0 and k) exists, counts[0] counts number of value 0 and so on 
         counts[array[i]] ++;
     }
-    std::vector<int> result(array.size(), 0); 
-    int pos = 0;
-    for(int i = 0; i<= counts.size(); i++){ //count array durchgehen
-        for(int j = 0; j < counts[i]; ++j){ //bis count für diese Stelle 0 ist
+    std::vector<int> result(array.size(), 0);
+    int pos = 0; //next empty position in result-array
+    for(int i = 0; i<= counts.size(); ++i){ //iterate through counts array
+        for(int j = 0; j < counts[i]; ++j){ //insert each value as often into result-array as counts-array says
             result[pos] = i;
             pos ++;
         }
     }
-    return result;
+    return result; //fully sorted array
 }
