@@ -16,11 +16,11 @@
 void quicksort (std::vector<int>& array, int start, int end);
 
 /**
- * Groessten gemeinsamen Teiler von zwei Zahlen (mit Hilfe des Euklidischen Algorithmus)
+ * Sorting a given array with numbers between 0 and k
  *
- * @param a Zahl von denen der geinsame Teiler gefunden wird
- * @param b Zahl von denen der geinsame Teiler gefunden wird
- * @return groesster gemeinsamer Teiler von a und b
+ * @param array array to be sorted
+ * @param k greatest value in array to be sorted
+ * @return sorted array
  *
 */
 std::vector<int> counting_sort (std::vector<int>const& array, int k);
