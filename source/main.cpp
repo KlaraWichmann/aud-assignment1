@@ -53,18 +53,40 @@ int main () {
     std::cout << "\n ---------------------------------------- \n";
     //___________________Counting sort___________________
     std::cout << "=====================COUNTING SORT========================\n";
-    //Output for array(vector) of size 3
-    std::vector<int> cs_a3 = {0, 15, 1};
-    std::cout << "Array of size 3 before: \n";
-    for (int i = 0; i < cs_a3.size(); i++) {
-        std::cout << cs_a3[i] << ' ';
+
+    std::cout << "Array before sorting: \n";
+    std::vector<int> a8 = {5, 7, 5, 1, 1, 0};
+    for (int i = 0; i < a8.size(); i++) {
+        std::cout << a8[i] << ' ';
     }
-    std::cout << "\n";
-    cs_a3 = counting_sort(cs_a3, *max_element(cs_a3.begin(), cs_a3.end()));
-    
-    std::cout << "Array of size 3 after: \n";
-    for (int i = 0; i < cs_a3.size(); i++) {
-        std::cout << cs_a3[i] << ' ';
+    std::cout << "\nSorted: \n";
+    std::vector<int> a8_sorted = counting_sort(a8,7);
+    for (int i = 0; i < a8_sorted.size(); i++) {
+        std::cout << a8_sorted[i] << ' ';
+    }
+    std::cout << "\n ---------------------------------------- \n";
+
+        std::cout << "Array before sorting: \n";
+    std::vector<int> a9 = {22, 9, 12, 8, 18, 0, 0, 0};
+    for (int i = 0; i < a9.size(); i++) {
+        std::cout << a9[i] << ' ';
+    }
+    std::cout << "\nSorted: \n";
+    std::vector<int> a9_sorted = counting_sort(a9,22);
+    for (int i = 0; i < a9_sorted.size(); i++) {
+        std::cout << a9_sorted[i] << ' ';
+    }
+    std::cout << "\n ---------------------------------------- \n";
+
+    std::cout << "Array before sorting: \n";
+    std::vector<int> a10 = {30, 23, 23, 1, 15, 6, 4, 4};
+    for (int i = 0; i < a10.size(); i++) {
+        std::cout << a10[i] << ' ';
+    }
+    std::cout << "\nSorted: \n";
+    std::vector<int> a10_sorted = counting_sort(a10,30);
+    for (int i = 0; i < a10_sorted.size(); i++) {
+        std::cout << a10_sorted[i] << ' ';
     }
     std::cout << "\n ---------------------------------------- \n";
 }

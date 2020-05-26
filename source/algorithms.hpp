@@ -23,6 +23,6 @@ void quicksort (std::vector<int>& array, int start, int end);
  * @return groesster gemeinsamer Teiler von a und b
  *
 */
-std::vector<int> counting_sort (std::vector<int> array, int k);
+std::vector<int> counting_sort (std::vector<int>const& array, int k);
 
 #endif
