@@ -1,38 +1,22 @@
 #include "algorithms.hpp"
 
 void quicksort (std::vector<int>& array, int start, int end) {
-    if (start < end) {
-        int pivot = (start + end) / 2;
+    if (start < end) { //if array is empty start == end and array is sorted
+        int pivot = (start + end) / 2; //sets the pivot in the middle of the array
         int endOfLeftSide = start;
-        std::swap(array[pivot], array[end]);
-        pivot = end;
+        std::swap(array[pivot], array[end]); //swaps the pivot element with the last element
+        pivot = end;//correct index of pivot element position
         for (int i = start; i <= end; i++) {
-            if (array[i] < array[pivot]) {
+            if (array[i] < array[pivot]) { //if array element is smaller than pivot element, put it left
                 std::swap(array[endOfLeftSide], array[i]);
-                endOfLeftSide++;
+                endOfLeftSide++; //increase the "border" on the left side
             }
         }
-        std::swap(array[endOfLeftSide], array[pivot]);
-        quicksort(array, start, endOfLeftSide - 1);
+        std::swap(array[endOfLeftSide], array[pivot]);//swap element on left border with position of pivot element (put it right)
+        quicksort(array, start, endOfLeftSide - 1); //call quicksort with subarrays (devided in middle)
         quicksort(array, endOfLeftSide + 1, end);
     }
 }
-
-/*std::vector<int> counting_sort (std::vector<int> array_a, int k) {
-    std::vector<int> array_b;
-    std::vector<int> array_c;
-    for (int j = 0; j < array_a.size(); j++) {
-        array_c[array_a[j]]++;
-    }
-    for (int i = 1; i < k; i++) {
-        array_c[i] += array_c[i - 1];
-    }
-    for (int j = array_a.size() - 1; j <= 0; j--) {
-        array_b[array_c[array_a[j]]] = array_a[j];
-        array_c[array_a[j]]--;
-    }
-    return array_b;
-}*/
 
 std::vector<int> counting_sort (std::vector<int>const& array, int k){
     std::vector<int> counts(k+1, 0);  // Laenge k+1, alle mit 0 initialisieren

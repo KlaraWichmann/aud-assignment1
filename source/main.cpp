@@ -6,6 +6,21 @@ int main () {
 
     //___________________Quicksort___________________
     std::cout << "=====================QUICKSORT========================\n";
+    //Output for array(vector) of size 1
+    std::vector<int> a1 = {1};
+    std::cout << "Array of size 1 before: \n";
+    for (int i = 0; i < a1.size(); i++) {
+        std::cout << a1[i] << ' ';
+    }
+    std::cout << "\n";
+        
+    quicksort (a1, 0, a1.size() - 1);
+    
+    std::cout << "Array of size 1 after: \n";
+    for (int i = 0; i < a1.size(); i++) {
+        std::cout << a1[i] << ' ';
+    }
+    std::cout << "\n ---------------------------------------- \n";
     //Output for array(vector) of size 3
     std::vector<int> a3 = {0, 15, 1};
     std::cout << "Array of size 3 before: \n";
@@ -49,6 +64,21 @@ int main () {
     std::cout << "Array of size 7 after: \n";
     for (int i = 0; i < a7.size(); i++) {
         std::cout << a7[i] << ' ';
+    }
+    std::cout << "\n ---------------------------------------- \n";
+    //Output for array(vector) of size 11
+    std::vector<int> a11 = {-1, 0, 0, -1, 15, 3, 24, 22, 13, 2, 1};
+    std::cout << "Array of size 11 before: \n";
+    for (int i = 0; i < a11.size(); i++) {
+        std::cout << a11[i] << ' ';
+    }
+    std::cout << "\n";
+        
+    quicksort (a11, 0, a11.size() - 1);
+    
+    std::cout << "Array of size 11 after: \n";
+    for (int i = 0; i < a11.size(); i++) {
+        std::cout << a11[i] << ' ';
     }
     std::cout << "\n ---------------------------------------- \n";
     //___________________Counting sort___________________
